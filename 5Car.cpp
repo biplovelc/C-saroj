@@ -9,11 +9,11 @@ class Car
 		string make;
 		int speed;
 	public:
-		void setAll(int y, string m, int s=0)
+		Car(int y, string m)
 		{
 			yearModel = y;
 			make = m;
-			speed = s;
+			speed = 0;
 		}
 		int getYear()
 		{
@@ -36,3 +36,16 @@ class Car
 			return (speed-=5);
 		}
 };
+int main()
+{
+	Car c(1950, "Ford");
+	for(int i=1; i<=5; i++){
+		cout<<"Speed = "<<c.accelerate()<<endl;
+	}
+
+		
+	for(int i=1; i<=5; i++){
+		cout<<"After brake, Speed = "<<c.brake()<<endl;	
+	}
+
+}
