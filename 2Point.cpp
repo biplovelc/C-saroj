@@ -26,12 +26,15 @@ class Point
 		}
 		void Display()
 		{
-			cout<<"("<<x<<", "<<y<<", "<<z<<")\n";
+			cout<<"Point("<<x<<", "<<y<<", "<<z<<")\n";
 		}
 		void getDistance(Point P)
 		{
 			double dist;
-			dist = sqrt(pow(P.getX()-x, 2)+pow(P.getY()-y, 2)+pow(P.getZ()-z, 2));
+			int a = pow(P.getX()-x, 2);
+			int b = pow(P.getY()-y, 2);
+			int c = pow(P.getZ()-z, 2);
+			dist = sqrt(a+b+c);
 			cout<<"Distance = "<<dist<<endl;
 		}
 };
@@ -39,11 +42,9 @@ class Point
 int main()
 {
 	Point P1, P2;
-	P1.setAll(2, 3,4);
-	P2.setAll(6,7,8);
-	cout<<"P1";
+	P1.setAll(1,6,7);
+	P2.setAll(7, 99, 87);
 	P1.Display();
-	cout<<"P2";
 	P2.Display();
 	P1.getDistance(P2);
 }

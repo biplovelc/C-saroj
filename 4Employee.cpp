@@ -22,7 +22,7 @@ class Employee
 			return name;
 		}
 		int getId()
-		{
+		{ 
 			return idNumber;
 		}
 		string getDepartment()
@@ -40,10 +40,10 @@ int main()
 	e[0].setAll("Susan Meyers", 47899, "Accounting", "Vice President");
 	e[1].setAll("Mark Jones", 39119, "Info Technology", "Programmer");
 	e[2].setAll("Joy Rogers", 81774, "Manufacturing", "Engineer");
-	cout<<"Name\t\t\tID Number\tDepartment\t\tPosition"<<endl;
+	cout<<"Name\t\tID Number\tDepartment\t\tPosition"<<endl;
 	for(int i=0; i<3; i++)
 	{
-		cout<<""<<e[i].getName()<<"\t\t";
+		cout<<""<<e[i].getName()<<"\t";
 		cout<<""<<e[i].getId()<<"\t\t";
 		cout<<""<<e[i].getDepartment()<<"\t\t";
 		cout<<""<<e[i].getPosition()<<endl;

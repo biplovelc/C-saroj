@@ -54,7 +54,9 @@ class Date
 				case 12:
 					return "December";
 					break;
-						
+				default:
+					cout<<"Invalid Input.";
+					break;
 			}
 		}
 		void getFirst();
@@ -63,21 +65,15 @@ class Date
 };
 void Date::getFirst()
 {
-	cout<<""<<day;
-	cout<<"/"<<month;
-	cout<<"/"<<year<<endl;
+	cout<<""<<day<<"/"<<month<<"/"<<year<<endl;
 }
 void Date::getSecond()
 {
-	cout<<""<<check();
-	cout<<" "<<day;
-	cout<<", "<<year<<endl;
+	cout<<""<<check()<<" "<<day<<", "<<year<<endl;
 }
 void Date::getLast()
 {
-	cout<<""<<day;
-	cout<<" "<<check();
-	cout<<" "<<year<<endl;
+	cout<<""<<day<<" "<<check()<<" "<<year<<endl;
 }
 int main()
 {
@@ -89,9 +85,9 @@ int main()
 	{
 		cout<<"Invalid day!!";
 	}
-	if(m < 1 || m>12)
+	if(m<1 || m>12)
 	{
-		cout<<"Invalid month!!"<<endl;
+		cout<<"Invalid month"<<endl;
 	}
 	else
 	{
